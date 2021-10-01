@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %}Наши работы{% endblock title %}
+{% block header %}
+<div class="container">
+
+</div>
+{% endblock %}
+
+{% block section %}
+
+<div class="row text-center text-lg-left">
+{% for el in works %}
+
+  <div class="col-lg-3 col-md-4 col-6 thumb">
+    <h6 class="text-white" style="text-shadow: 3px 3px 3px #000000;">{{ el.title }}</h6>
+{% if el.photo %}
+
+    <img class="img-fluid gallery-item" src="{{ MEDIA_URL }}{{ el.photo.url}}" alt="gallery">
+
+{% endif %}
+  </div>
+  {% endfor %}
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="gallery-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+
+        <h3> {{ title }} </h3>
+
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img class="modal-img" src="https://source.unsplash.com/pWkk7iiCoDM/400x300" alt="modal img">
+
+    </div>
+  </div>
+</div>
+</div>
+
+{% endblock section %}

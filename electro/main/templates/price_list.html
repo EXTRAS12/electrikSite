@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Цены{% endblock title %}
+{% block header %}{% endblock header %}
+{% block section %}
+
+
+{% for category in categories %}
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header bg-primary" id="flush-headingOne">
+      <button class="accordion-button collapsed bg-primary text-white" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        {{ category.name }}
+      </button>
+    </h2>
+    {% for price in prices %}
+ {% if category.name == price.category.name %}
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">{{ price.name }} <code> цена: {{ price.price }} руб.</code>  </div>
+    </div>
+{% endif %}
+    {% endfor %}
+  </div>
+</div>
+{% endfor %}
+
+{% endblock section %}
+
+
+
