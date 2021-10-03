@@ -31,8 +31,8 @@ def work(request):
     return render(request, 'work.html', context=context)
 
 
-def comments(request):
-    return render(request, 'comments.html')
+# def comments(request):
+#     return render(request, 'comments.html')
 
 
 def about(request):
