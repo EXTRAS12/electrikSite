@@ -16,7 +16,7 @@
     {% for price in prices %}
  {% if category.name == price.category.name %}
     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">{{ price.name }} <code style="float: right;"> цена: {{ price.price }} руб.</code> </div>
+      <div class="accordion-body">{{ price.name }} <p style="float: right;">{{ price.price }} руб</p> </div>
         <hr>
     </div>
 {% endif %}

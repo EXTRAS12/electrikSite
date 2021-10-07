@@ -11,14 +11,16 @@
 <div class="row text-center text-lg-left">
 {% for el in works %}
 
-  <div class="col-lg-3 col-md-4 col-6 thumb">
+  <div class="col-lg-3 col-md-6 col-12 thumb">
+
     <h6 class="text-white" style="text-shadow: 3px 3px 3px #000000;">{{ el.title }}</h6>
 {% if el.photo %}
 
-    <img class="img-fluid gallery-item" src="{{ MEDIA_URL }}{{ el.photo.url}}" alt="gallery">
+    <img class="img-fluid gallery-item " src="{{ MEDIA_URL }}{{ el.photo.url}}" alt="gallery">
 
 {% endif %}
   </div>
+
   {% endfor %}
 </div>
 

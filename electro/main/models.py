@@ -3,7 +3,7 @@ from django.urls import reverse
 
 
 class WorkList(models.Model):
-    title = models.CharField(max_length=150, verbose_name='Фотография для Вас')
+    title = models.CharField(max_length=150, verbose_name='Фото')
     content = models.TextField(blank=True, verbose_name='Контент')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата публикации')
     updated_at = models.DateTimeField(auto_now=True, verbose_name='Обновлено')
@@ -37,7 +37,7 @@ class Category(models.Model):
 class PriceCategory(models.Model):
     category = models.ForeignKey(Category, verbose_name='Категория', on_delete=models.CASCADE)
     name = models.CharField(max_length=255, verbose_name='Наименование')
-    price = models.DecimalField(max_digits=9, decimal_places=2, verbose_name='Цена')
+    price = models.DecimalField(max_digits=9, decimal_places=0, verbose_name='Цена')
 
 
     def __str__(self):
