@@ -21,7 +21,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+<<<<<<< HEAD
 SECRET_KEY = 'django-insecure-0pqn_-)8a^5p5eforr!bq$5=6ugo(denjh=($x!kk1*t50sj5%qw'
+=======
+SECRET_KEY = 'django-insecure-0pqn_-)8a^5p5eforr!bq$5=6ugo(denjh=($x!kk1*t50sj5%wwqw'
+>>>>>>> 377369e (optimization)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -141,3 +145,11 @@ EMAIL_HOST_USER = ''  #имя пользователя для доступа к 
 EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
+
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': os.path.join(BASE_DIR, 'django_cache'),
+    }
+}
