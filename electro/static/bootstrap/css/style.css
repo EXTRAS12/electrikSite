@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+body, html {
+  background: #9ac3da; /* Old browsers */
+background: -moz-linear-gradient(top,  #9ac3da 1%, #4642b3 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #9ac3da 1%,#4642b3 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #9ac3da 1%,#4642b3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9ac3da', endColorstr='#4642b3',GradientType=0 ); /* IE6-9 */
+
+}
+
+
+.list-group li {
+    list-style: none;
+    background: #000000;
+    color: #fff;
+}
+
+.card-title {
+    color: #fff;
+}
+
+li {
+    color: #fff;
+}
+
+nav {
+background: #1d3454;
+background: -moz-linear-gradient(top,  #1d3454 27%, #98c3dc 100%);
+background: -webkit-linear-gradient(top,  #1d3454 27%,#98c3dc 100%);
+background: linear-gradient(to bottom,  #1d3454 27%,#98c3dc 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d3454', endColorstr='#98c3dc',GradientType=0 );
+ }
+
+
+
+footer {
+    background: #000000;
+ }
+
+
+h4 {
+    color: #fff;
+    text-shadow: 12px 12px 13px black;
+    font-family: "PT Sans", sans-serif;
+    }
+strong {
+    color: #fff;
+}
+
+
+.hr-shadow {
+	margin: 20px 0;
+	padding: 0;
+	height: 10px;
+	border: none;
+	border-top: 1px solid #333;
+	box-shadow: 0 10px 10px -10px #8c8b8b inset;
+}
+
+.card-body {
+     background: #000000;
+}
+.center-element {
+position: absolute;
+top: 45%;
+left:50%;
+transform: translate(-50%,-50%);
+color: #FFFFFF;
+width: 100%;
+display: block;
+text-shadow: 3px 3px 3px #000000;
+
+}
+
+
+.link-hover-center a {
+
+    color: #07aa19;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+}
+.link-hover-center a:after {
+    display: block;
+    content: "";
+    background-color: #DA70D6;
+    height: 3px;
+    width: 0%;
+    left: 50%;
+    position: absolute;
+    -webkit-transition: width .3s ease-in-out;
+    -moz--transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.link-hover-center a:hover:after,
+.link-hover-center a:focus:after {
+    width: 100%;
+}

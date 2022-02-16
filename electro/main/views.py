@@ -1,5 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404
-from django.views.generic import ListView
+from django.shortcuts import render, redirect
 from .models import WorkList, Category, PriceCategory
 from .forms import CallForm
 from django.core.mail import send_mail
@@ -7,12 +6,14 @@ from django.contrib import messages
 
 
 def base_page(request):
+    """Главная страница"""
     return render(request, 'main/index.html')
 
 
 def get_category(request):
-    categories = Category.objects.all
-    prices = PriceCategory.objects.all
+    """Категорий"""
+    categories = Category.objects.all()
+    prices = PriceCategory.objects.all().select_related('category')
     context = {
         'prices': prices,
         'categories': categories,
@@ -20,30 +21,24 @@ def get_category(request):
     return render(request, 'main/price_list.html', context=context)
 
 
-def work(request):
+def our_work(request):
+    """Наши работы"""
     works = WorkList.objects.all()
     context = {
         'works': works,
         'title': 'Фото для Вас',
         'content': 'Контент',
-        'photo': 'Фото',
- }
+        'photo': 'Фото', }
     return render(request, 'main/work.html', context=context)
 
 
-# def comments(request):
-#     return render(request, 'comments.html')
-
-
 def about(request):
+    """Страница о нас"""
     return render(request, 'main/about.html')
 
 
 def contacts(request):
-    return render(request, 'main/contacts.html')
-
-
-def contacts(request):
+    """Контакты"""
     if request.method == 'POST':
         form = CallForm(request.POST)
         if form.is_valid():
@@ -61,5 +56,3 @@ def contacts(request):
     else:
         form = CallForm()
     return render(request, 'main/contacts.html', {"form": form})
-
-

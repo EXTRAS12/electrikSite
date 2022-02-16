@@ -1,2 +1,252 @@
 {% extends 'base.html' %}
 {% block title %}«Аккурат Энерго»{% endblock title %}
+{% block preloader %}
+  {% include 'inc/preloader.html' %}
+{% endblock preloader %}
+
+{% load cache %}
+
+{% block header %}
+{% include 'inc/_header.html' %}
+{% endblock header %}
+
+
+{% cache 300 sec %}
+{% block section %}
+<section>
+    <div class="row">
+        <div class="col-md-6 gx-5 mb-4">
+            <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light" style="border-radius: 10px;
+border: 5px #ccc solid;
+box-shadow: 0 0 10px #444;">
+                <img src="static/bootstrap/img/lampa.jpg" class="img-fluid"/>
+
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+
+            </div>
+        </div>
+
+        <div class="col-md-6 gx-5 mb-4">
+            <h4><strong>Электромонтажные работы и техническое обслуживание электрохозяйств</strong></h4>
+
+            <strong>С какими объектами мы работаем:</strong>
+            <p class="text-muted">
+
+            <ul class="list-group" style="border-radius: 10px;
+border: 5px #ccc solid;
+box-shadow: 0 0 10px #444;">
+                <li class="list-group-item">Коммерческие организации</li>
+                <li class="list-group-item">Частные дома и коттеджи</li>
+                <li class="list-group-item">Квартиры</li>
+                <li class="list-group-item">Торговые центры</li>
+                <li class="list-group-item">Промышленные объекты</li>
+                <li class="list-group-item">Городские и муниципальные службы</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+<!--Section: Content-->
+
+<hr class="my-5"/>
+
+<!--Section: Content-->
+<section class="wrapper">
+    <div class="container-fostrap">
+        <div>
+
+            <h1 class="text-white heading" style="text-shadow: 3px 3px 3px #000000;">
+                Мы осуществляем следующий комплекс электротехнических услуг:
+
+            </h1>
+        </div>
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="card">
+                            <a class="img-card" href="{% url 'price' %}">
+                                <img src="static/bootstrap/img/el1.jpg"/>
+                            </a>
+                            <div class="card-content">
+                                <h4 class="card-title">
+                                    <a href="{% url 'price' %}"> Внутренний электромонтаж
+
+                                    </a>
+                                </h4>
+                                <p class="">
+                                    - Электромонтажные работы внутренней электропроводки и внутренних
+                                    электроприборов<br>
+                                    - Монтаж систем и приборов учета расхода электрической энергии<br>
+                                    - Реконструкция и модернизация электротехнологического оборудования и
+                                    электротехнических установок<br>
+                                    - комплекс пуско-наладочных работ
+
+                                </p>
+                            </div>
+                            <div class="card-read-more">
+                                <a href="{% url 'price' %}"
+                                   class="btn btn-link btn-block">
+                                    Узнать цены
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="card">
+                            <a class="img-card"
+                               href="{% url 'price' %}">
+                                <img src="static/bootstrap/img/el2.jpg"/>
+                            </a>
+                            <div class="card-content">
+                                <h4 class="card-title">
+                                    <a href="{% url 'price' %}">
+                                        Монтаж и подключение электрооборудования
+
+                                    </a>
+                                </h4>
+                                <p class="">
+                                    - Монтаж изделий и оборудования электроосвещения в помещениях и на улице<br>
+                                    - Установка внутренних систем электроснабжения<br>
+                                    - Установка резервных источников питания<br>
+                                    - Подключение различного оборудования к электрическим сетям энергоснабжающих
+                                    организаций
+
+                                </p>
+                            </div>
+                            <div class="card-read-more">
+                                <a href="{% url 'price' %}"
+                                   class="btn btn-link btn-block">
+                                    Узнать цены
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="card">
+                            <a class="img-card"
+                               href="{% url 'price' %}">
+                                <img src="static/bootstrap/img/el3.jpg"/>
+                            </a>
+                            <div class="card-content">
+                                <h4 class="card-title">
+                                    <a href="{% url 'price' %}">
+                                        Сборка и монтаж щитового оборудования
+
+                                    </a>
+                                </h4>
+                                <p class="">
+                                    - Сборка электрощитов (НКУ) по типовым и индивидуальным проектам<br>
+                                    - Монтаж этажных и индивидуальных щитов, вводно-распределительных устройств,
+                                    пунктов распределения
+
+                                </p>
+                            </div>
+                            <div class="card-read-more">
+                                <a href="{% url 'price' %}"
+                                   class="btn btn-link btn-block">
+                                    Узнать цены
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+
+
+        </div>
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="card">
+                            <a class="img-card"
+                               href="{% url 'price' %}">
+                                <img src="static/bootstrap/img/el4.jpg"/>
+                            </a>
+                            <div class="card-content">
+                                <h4 class="card-title">
+                                    <a href="{% url 'price' %}">
+                                        Разработка проекта электроснабжения
+
+                                    </a>
+                                </h4>
+                                <p class="">
+                                    - Изготовление проектной документации по электроснабжению объекта или его
+                                    реконструкции
+
+                                </p>
+                            </div>
+                            <div class="card-read-more">
+                                <a href="{% url 'price' %}"
+                                   class="btn btn-link btn-block">
+                                    Узнать цены
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="card">
+                            <a class="img-card"
+                               href="{% url 'price' %}">
+                                <img src="static/bootstrap/img/el5.jpg"/>
+                            </a>
+                            <div class="card-content">
+                                <h4 class="card-title">
+                                    <a href="{% url 'price' %}">
+                                        Устройство заземления и молниезащиты
+                                    </a>
+                                </h4>
+                                <p class="">
+                                    - Монтаж заземляющих устройств всех типов и цепей заземления<br>
+                                    - Заземление опор линий электропередач<br>
+                                    - Молниезащита зданий и сооружений<br>
+                                </p>
+                            </div>
+                            <div class="card-read-more">
+                                <a href="{% url 'price' %}"
+                                   class="btn btn-link btn-block">
+                                    Узнать цены
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="card">
+                            <a class="img-card"
+                               href="{% url 'price' %}">
+                                <img src="static/bootstrap/img/el6.jpg"/>
+                            </a>
+                            <div class="card-content">
+                                <h4 class="card-title">
+                                    <a href="{% url 'price' %}">
+                                        Устройство уличного освещения
+
+                                    </a>
+                                </h4>
+                                <p class="">
+                                    - Установка и подключение светильников и прожекторов<br>
+                                    - Прокладка провода и монтаж арматуры<br>
+                                    - Установка и подключение системы управления
+
+                                </p>
+                            </div>
+                            <div class="card-read-more">
+                                <a href="{% url 'price' %}"
+                                   class="btn btn-link btn-block">
+                                    Узнать цены
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% endcache sec %}
