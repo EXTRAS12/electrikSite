@@ -1,8 +1,8 @@
-from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import base_page, get_category, our_work,  about, contacts
+from django.urls import path
 
+from .views import about, base_page, contacts, get_category, our_work
 
 urlpatterns = [
     path('', base_page, name='index'),

@@ -1,8 +1,9 @@
-from django.shortcuts import render, redirect
-from .models import WorkList, Category, PriceCategory
-from .forms import CallForm
-from django.core.mail import send_mail
 from django.contrib import messages
+from django.core.mail import send_mail
+from django.shortcuts import redirect, render
+
+from .forms import CallForm
+from .models import Category, PriceCategory, WorkList
 
 
 def base_page(request):
